@@ -1,0 +1,34 @@
+const product = {
+  name: 'Smartphone',
+  price: 100,
+  inStock: true,
+  brand: 'Apple',
+  specifications: {
+    screen: '5.5 inch',
+    camera: '12 MP',
+    memory: '64 GB'
+  },
+  discount: {
+    percentage: 10,
+    expirationDate: '2023-01-01'
+  }
+};
+
+const customer = {
+  name: 'John',
+  budget: 120
+};
+
+if (customer.budget < product.price) {
+  console.log('Sorry, your budget is not enough to buy this product');
+} else {
+  console.log(`Congratulations, ${customer.name}! You can afford to buy the ${product.name}`);
+  console.log('Technical specifications:', product.specifications);
+  
+  if (product.discount) {
+    const discountedPrice = product.price - (product.price * (product.discount.percentage / 100));
+    console.log(`There is a discount of ${product.discount.percentage}%, so the price with discount is ${discountedPrice}`);
+  } else {
+    console.log('There is no discount for this product');
+  }
+}
