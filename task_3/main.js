@@ -17,7 +17,7 @@ const product = {
 // Объект "customer"
 const Buyer = {
     name: "Артём",
-    Budget: 3500
+    Budget: 3500,
     
 };
 
