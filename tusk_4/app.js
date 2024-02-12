@@ -1,18 +1,25 @@
- let users = [{ name: "Dima", age: 25}, { name: "Katy", age: 19}, { name: "Artem", age: 35},];
- console.log("Перед изменением:");
+const companies =
+{
+    "Google": 
+    {
+        people: ["Володя", "Петя", "Александр"]
+    },
+    "Microsoft": 
+    {
+        people: ["Артём", "Ваня", "Родион"]
+    },
+    "Vk": 
+    {
+        people: ["Кирилл", "Ваня", "Анакендий"]
+    }
+};
 
- for (let user of users)
- {
-    console.log(user.name);
- }
+for (const companyName in companies) 
+{
+    console.log(`Сотрудники компании ${companyName}:`);
 
- for (let user of users)
- {
-    user.age +=1;
- }
- console.log("После изменения:");
-
- for (let user of users)
- {
-    console.log(`${user.name} теперь ${user.age} лет`);
- }
+    for (const peopleName of companies[companyName].people) 
+    {
+        console.log(peopleName);
+    }
+}
